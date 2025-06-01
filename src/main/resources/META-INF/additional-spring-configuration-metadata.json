@@ -1,0 +1,38 @@
+{
+  "properties": [
+    {
+      "name": "common.config.dataTypeMappingKey",
+      "type": "java.lang.String",
+      "description": "Description for common.config.dataTypeMappingKey."
+    },
+    {
+      "name": "common.config.keyConflictOperator",
+      "type": "java.lang.String",
+      "description": "Description for common.config.keyConflictOperator."
+    },
+    {
+      "name": "management.endpoints.web.exposure.include",
+      "type": "java.lang.String",
+      "description": "Description for management.endpoints.web.exposure.include."
+    },
+    {
+      "name": "management.endpoint.health.show-details",
+      "type": "java.lang.String",
+      "description": "Description for management.endpoint.health.show-details."
+    },
+    {
+      "name": "spring.boot.admin.client.instance.metadata.user.name",
+      "type": "java.lang.String",
+      "description": "Description for spring.boot.admin.client.instance.metadata.user.name."
+    },
+    {
+      "name": "spring.boot.admin.client.instance.metadata.user.password",
+      "type": "java.lang.String",
+      "description": "Description for spring.boot.admin.client.instance.metadata.user.password."
+    },
+    {
+      "name": "common.config.nameResolution",
+      "type": "java.lang.String",
+      "description": "Description for common.config.nameResolution."
+    }
+  ] }

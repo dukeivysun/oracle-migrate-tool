@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ttt="http://types.duke.com/mapping"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://types.duke.com/mapping http://types.duke.com/mapping/mappingDataType.xsd">
+
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="CHAR" targetName="CHAR" range="2000" needLength="true" needScale="false" replaceType="VARCHAR"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="CHARACTER" targetName="CHARACTER" range="2000" needLength="true" needScale="false" replaceType="VARCHAR"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="DECIMAL" targetName="DECIMAL" needLength="true" needScale="true"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="NCHAR" targetName="NCHAR" range="" needLength="true" needScale="false" replaceType="NVARCHAR"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="VARCHAR" targetName="VARCHAR" range="4000" needLength="true" needScale="false" replaceType="TEXT"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="VARCHAR2" targetName="VARCHAR" range="4000" needLength="true" needScale="false" replaceType="TEXT"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="NVARCHAR2" targetName="NVARCHAR" range="4000" needLength="true" needScale="false" replaceType="TEXT"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="NUMBER" targetName="NUMERIC" needLength="true" needScale="true"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="DATE" targetName="DATETIME" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="TIMESTAMP" targetName="DATETIME" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="TIMESTAMP()" targetName="DATETIME" needLength="true" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="TIMESTAMP WITH TIME ZONE" targetName="DATETIME" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="TIMESTAMP() WITH TIME ZONE" targetName="DATETIME" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="TIMESTAMP() WITH LOCAL TIME ZONE" targetName="DATETIME" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="INTERVAL DAY() TO SECOND" targetName="VARCHAR(20)" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="INTERVAL DAY TO SECOND" targetName="VARCHAR(20)" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="INTERVAL YEAR() TO MONTH" targetName="VARCHAR(20)" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="INTERVAL YEAR TO MONTH" targetName="VARCHAR(20)" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="INTERVAL YEAR" targetName="VARCHAR(20)" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="INTERVAL DAY" targetName="VARCHAR(20)" needLength="true" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="LONG" targetName="LONGTEXT" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="RAW" targetName="VARBINARY" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="LONG RAW" targetName="LONGBLOB" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="ROWID" targetName="CHAR(32)" needLength="true" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="BLOB" targetName="LONGBLOB" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="CLOB" targetName="LONGTEXT" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="NCLOB" targetName="TEXT" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="BFILE" targetName="VARCHAR(255)" range="8000" needLength="false" needScale="false" replaceType="BYTEA"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="UROWID" targetName="VARCHAR" needLength="true" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="FLOAT" targetName="DOUBLE" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="BINARY_FLOAT" targetName="FLOAT" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="REAL" targetName="DOUBLE" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="BINARY_DOUBLE" targetName="DOUBLE" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="DOUBLE PRECISION" targetName="DOUBLE PRECISION" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="LONG" targetName="TEXT" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="XMLTYPE" targetName="LONGTEXT" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="SYS.XMLTYPE" targetName="LONGTEXT" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="INTEGER" targetName="DECIMAL(38)" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="INT" targetName="DECIMAL(38)" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="SMALLINT" targetName="DECIMAL(38)" needLength="false" needScale="false"/>
+    <ttt:mapping source="Oracle" target="MySQL" sourceVersion="12c" targetVersion="8.x" sourceName="NCHAR VARYING" targetName="NCHAR VARYING" range="4000" needLength="true" needScale="false" replaceType="TEXT"/>
+
+</beans>

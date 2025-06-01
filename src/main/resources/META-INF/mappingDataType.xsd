@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://types.duke.com/mapping"
+            targetNamespace="http://types.duke.com/mapping">
+
+    <xsd:complexType name="dataType">
+        <xsd:attribute name="source" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="target" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="sourceVersion" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="targetVersion" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="sourceName" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="targetName" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="range" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="needLength" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="needScale" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="replaceType" type="xsd:string">
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:element name="mapping" type="dataType">
+    </xsd:element>
+</xsd:schema>

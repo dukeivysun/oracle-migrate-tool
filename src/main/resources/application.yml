@@ -1,0 +1,40 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    web-application-type: none
+  datasource:
+    url: jdbc:mysql://localhost:3306/configdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullNamePatternMatchesAll=true&useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    hikari:
+      pool-name: oracle_replicator_hikari
+      auto-commit: true
+      connection-timeout: 60000
+      idle-timeout: 60000
+      login-timeout: 10
+      max-lifetime: 61000
+      maximum-pool-size: 10
+      minimum-idle: 10
+      read-only: false
+      connection-test-query: SELECT 1
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        ddl-auto: update
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        order_inserts: true
+        order_updates: true
+    show-sql: false
+    open-in-view: false
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/db_script_all.xml
+
+  config:
+    import: common.yml
