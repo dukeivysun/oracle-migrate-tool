@@ -1,21 +1,12 @@
 package org.dukejasun.migrate.cache.enums;
 
+import lombok.Getter;
+
 /**
  * @author dukedpsun
  */
+@Getter
 public enum CachedTypeEnum {
-    /**
-     * redis
-     */
-    REDIS("REDIS"),
-    /**
-     * memcached
-     */
-    MEMCACHED("MEMCACHED"),
-    /**
-     * caffeine
-     */
-    CAFFEINE("CAFFEINE"),
     /**
      * jvm
      */
@@ -24,10 +15,6 @@ public enum CachedTypeEnum {
 
     CachedTypeEnum(String code) {
         this.code = code;
-    }
-
-    public String getCode() {
-        return code;
     }
 
     public static CachedTypeEnum getCachedType(String cachedTypeValue) {

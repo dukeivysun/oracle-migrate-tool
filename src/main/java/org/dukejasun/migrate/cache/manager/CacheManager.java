@@ -1,11 +1,10 @@
 package org.dukejasun.migrate.cache.manager;
 
-import org.dukejasun.migrate.cache.CachedOperation;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.dukejasun.migrate.cache.enums.CachedTypeEnum;
 import org.dukejasun.migrate.cache.impl.LocalCacheOperation;
 import org.dukejasun.migrate.cache.model.DataCacheConfig;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -24,24 +23,8 @@ public class CacheManager {
     }
 
     @Bean
-    public CachedOperation cachedOperation() {
+    public LocalCacheOperation cachedOperation() {
         CachedTypeEnum cachedTypeEnum = CachedTypeEnum.getCachedType(StringUtils.isBlank(dataCacheConfig.getType()) ? CachedTypeEnum.JVM.getCode() : dataCacheConfig.getType());
-        CachedOperation cachedOperation;
-        switch (cachedTypeEnum) {
-            case REDIS:
-                cachedOperation = new RedisOperation(dataCacheConfig);
-                break;
-            case CAFFEINE:
-                cachedOperation = new CaffeineOperation(dataCacheConfig);
-                break;
-            case MEMCACHED:
-                cachedOperation = new MemcachedOperation(dataCacheConfig);
-                break;
-            case JVM:
-            default:
-                cachedOperation = new LocalCacheOperation(dataCacheConfig);
-                break;
-        }
-        return cachedOperation;
+        return new LocalCacheOperation(dataCacheConfig);
     }
 }

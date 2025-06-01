@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration("dataCacheConfig")
 @ConfigurationProperties(prefix = "data.cache")
 public class DataCacheConfig {
-    private String type = CachedTypeEnum.CAFFEINE.getCode();
+    private String type = CachedTypeEnum.JVM.getCode();
     private String server;
     private Integer port;
     private Integer database;
