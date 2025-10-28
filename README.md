@@ -1,1 +1,1 @@
-migrate oracle data witn logmiger
+migrate oracle data with logmiger
